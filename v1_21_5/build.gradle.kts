@@ -1,5 +1,3 @@
-import net.fabricmc.loom.task.RemapJarTask
-
 plugins {
     id("maven-publish")
 }
@@ -26,9 +24,9 @@ dependencies {
     modImplementation("net.fabricmc:fabric-loader:${loader_version}")
     modImplementation("net.fabricmc.fabric-api:fabric-api:${fabric_version}")
     //Replace Masa malilib with sakura-ryoko fork
-    modImplementation("com.github.sakura-ryoko:malilib:1.21.4-0.23.2-sakura.6")
+    modImplementation("com.github.sakura-ryoko:malilib:1.21.5-0.24.2")
     //Replace masa litematica with sakura-ryoko fork
-    modImplementation("com.github.sakura-ryoko:litematica:1.21.4-0.21.2-sakura.8")
+    modImplementation("com.github.sakura-ryoko:litematica:1.21.5-0.22.2")
     modImplementation("com.ptsmods:devlogin:3.5")
 }
 

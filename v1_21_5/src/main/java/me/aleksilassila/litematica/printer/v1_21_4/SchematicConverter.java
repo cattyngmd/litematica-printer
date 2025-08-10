@@ -12,11 +12,11 @@ import java.io.File;
  */
 public class SchematicConverter {
     public static LitematicaSchematic convertAndReturn(File file, File out) {
-        LitematicaSchematic schematic = LitematicaSchematicAccessor.invokeConstructor(file, FileType.VANILLA_STRUCTURE);
+        LitematicaSchematic schematic = LitematicaSchematicAccessor.invokeConstructor(file.toPath(), FileType.VANILLA_STRUCTURE);
         schematic.readFromFile();
         String fileName = file.getName().replace(".nbt", "");
-        schematic.writeToFile(out, fileName, true);
-        LitematicaSchematic newSchem = LitematicaSchematicAccessor.invokeConstructor(new File(out, fileName + ".litematic"), FileType.LITEMATICA_SCHEMATIC);
+        schematic.writeToFile(out.toPath(), fileName, true);
+        LitematicaSchematic newSchem = LitematicaSchematicAccessor.invokeConstructor(new File(out, fileName + ".litematic").toPath(), FileType.LITEMATICA_SCHEMATIC);
         newSchem.readFromFile();
         return newSchem;
     }

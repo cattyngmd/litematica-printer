@@ -6,6 +6,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Invoker;
 
 import java.io.File;
+import java.nio.file.Path;
 
 /**
  * @author IceTank
@@ -13,8 +14,8 @@ import java.io.File;
  */
 @Mixin(LitematicaSchematic.class)
 public interface LitematicaSchematicAccessor {
-    @Invoker("<init>")
-    static LitematicaSchematic invokeConstructor(File file, FileType fileType) {
+    @Invoker(value = "<init>", remap = false)
+    static LitematicaSchematic invokeConstructor(Path file, FileType fileType) {
         throw new AssertionError();
     }
 }

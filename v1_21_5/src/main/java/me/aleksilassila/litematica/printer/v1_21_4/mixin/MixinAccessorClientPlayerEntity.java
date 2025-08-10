@@ -15,13 +15,13 @@ public interface MixinAccessorClientPlayerEntity {
     @Accessor("lastSneaking")
     void setLastSneaking(boolean lastSneaking);
 
-    @Accessor("lastPitch")
+    @Accessor("lastPitchClient")
     float getLastPitch();
-    @Accessor("lastPitch")
+    @Accessor("lastPitchClient")
     void setLastPitch(float lastPitch);
 
-    @Accessor("lastYaw")
+    @Accessor("lastYawClient")
     float getLastYaw();
-    @Accessor("lastYaw")
+    @Accessor("lastYawClient")
     void setLastYaw(float lastYaw);
 }
