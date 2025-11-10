@@ -24,9 +24,9 @@ dependencies {
     modImplementation("net.fabricmc:fabric-loader:${loader_version}")
     modImplementation("net.fabricmc.fabric-api:fabric-api:${fabric_version}")
     //Replace Masa malilib with sakura-ryoko fork
-    modImplementation("com.github.sakura-ryoko:malilib:1.21.5-0.24.2")
+    modImplementation("com.github.sakura-ryoko:malilib:1.21.8-0.25.5")
     //Replace masa litematica with sakura-ryoko fork
-    modImplementation("com.github.sakura-ryoko:litematica:1.21.5-0.22.2")
+    modImplementation("com.github.sakura-ryoko:litematica:1.21.8-0.23.4")
     modImplementation("com.ptsmods:devlogin:3.5")
 }
 
