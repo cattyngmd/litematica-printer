@@ -1,6 +1,6 @@
 plugins {
     id("java")
-    id("fabric-loom").version("1.13-SNAPSHOT").apply(false)
+    id("fabric-loom").version("1.14-SNAPSHOT").apply(false)
 }
 
 subprojects {
@@ -21,7 +21,7 @@ val archives_base_name: String by project
 val mod_version: String by project
 
 val buildAll = tasks.create("buildAll") {
-    dependsOn(":v1_21_8:build")
+    dependsOn(":v1_21_11:build")
     // This isn't working.... you still have to run each build individually
 /*    tasks.findByName(":v1_19_3:build")?.mustRunAfter(":v1_19_4:build")
     tasks.findByName(":v1_19:build")?.mustRunAfter(":v1_19_3:build")
